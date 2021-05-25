@@ -1,6 +1,6 @@
 FROM openjdk:8-alpine
 
-RUN mkdir /springboot-service
+# RUN mkdir /springboot-service
 
 WORKDIR /springboot-service
 
