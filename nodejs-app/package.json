@@ -2,16 +2,24 @@
   "name": "nodejs-app",
   "version": "1.0.0",
   "description": "Node.js(Express.js) Demo app for dockers demo",
-  "main": "app.js",
+  "main": "src/app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node app.js"
+    "start": "node src/app.js"
   },
-  "author": "Sriram, Ponangi",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/sriram-ponangi/dockers-k8s-demo-microservices.git"
+  },
+  "author": "Sriram Ponangi",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sriram-ponangi/dockers-k8s-demo-microservices/issues"
+  },
+  "homepage": "https://github.com/sriram-ponangi/dockers-k8s-demo-microservices#readme",
   "dependencies": {
     "cors": "^2.8.5",
-    "express": "^4.17.1",
+    "express": "^4.18.2",
     "redis": "^2.8.0",
     "response-time": "^2.3.2"
   }

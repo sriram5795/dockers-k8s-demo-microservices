@@ -1,21 +1,19 @@
-package com.demo.controllers;
+package com.demo.springboot.app.controllers;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import com.demo.springboot.app.models.Quote;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.demo.models.Quote;
 
+@Slf4j
 @RestController
 public class QuotesController {
-	final static Logger logger = LoggerFactory.getLogger(QuotesController.class);
-
-	private static int index = -1;
+	private int index = -1;
 	public static List<Quote> quotes = new ArrayList<>();
 	static {
 		quotes.add(new Quote("It’s hardware that makes a machine fast.  It’s software that makes a fast machine slow.","Craig Bruce"));
@@ -35,7 +33,7 @@ public class QuotesController {
 	@GetMapping("/quote")
 	public Quote getQuote() {	
 		index = (index == quotes.size()-1) ? 0 : index+1;
-		logger.info("Quote Index: "+index);
-		return quotes.get(index);		
+		log.info("Quote Index: {}", index);
+		return quotes.get(index);
 	}
 }
